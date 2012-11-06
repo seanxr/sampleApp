@@ -22,8 +22,7 @@ describe "User pages" do
         it { should have_content('error') }
       end
     end
-
-
+  
 
     describe "with valid information" do
       before do
@@ -43,6 +42,8 @@ describe "User pages" do
 
         it { should have_selector('title', text: user.name) }
         it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+        it { should have_link('Sign out') }
+      end
     end
   end
 
